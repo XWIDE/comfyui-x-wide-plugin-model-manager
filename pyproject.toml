@@ -1,0 +1,28 @@
+[project]
+name = "x-wide-plugin-model-manager"
+version = "1.1.0"
+description = "X-WIDE Plugin & Model Manager —— read-only-first local manager for ComfyUI custom nodes and models: startup timing, plugin dependency analysis, workflow usage, model inventory; the only filesystem write is disabling a plugin by renaming its folder to .disabled"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    # 纯本地分析 + 只用标准库 / ComfyUI 自带的 aiohttp，不依赖任何 GPU 或加速库
+    "Operating System :: OS Independent",
+]
+dependencies = []
+authors = [{ name = "X-WIDE" }]
+readme = "README.md"
+keywords = ["comfyui", "manager", "custom-nodes", "plugins", "models", "analyzer", "x-wide"]
+
+[project.urls]
+Repository = "https://github.com/XWIDE/comfyui-x-wide-plugin-model-manager"
+"Bug Tracker" = "https://github.com/XWIDE/comfyui-x-wide-plugin-model-manager/issues"
+Documentation = "https://github.com/XWIDE/comfyui-x-wide-plugin-model-manager#readme"
+
+[tool.comfy]
+PublisherId = "xwide"
+DisplayName = "X-WIDE Plugin & Model Manager"
+Icon = "https://raw.githubusercontent.com/XWIDE/comfyui-x-wide-plugin-model-manager/main/web/logo_xwide_icon.png"
+# Registry / Manager 页面上的横幅（21:9）；图片放在仓库里、用完整 raw 地址即可
+Banner = "https://raw.githubusercontent.com/XWIDE/comfyui-x-wide-plugin-model-manager/main/docs/images/banner.png"
+requires-comfyui = ">=0.3.0"
+includes = []

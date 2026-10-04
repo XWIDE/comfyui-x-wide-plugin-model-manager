@@ -1,0 +1,13 @@
+# 这些只在 GitHub 上有用，不打进 ComfyUI Registry 的插件包
+.github/
+docs/
+__pycache__/
+
+# 运行期在本机生成的数据：缓存、动作日志、本机分析报告。
+# 它们只对「跑出这份数据的那台机器」有意义，不该跟着插件包发给别人（加起来好几 MB）。
+actions.log
+*.log
+*.jsonl
+_*.json
+autopilot.json
+CustomNode插件顾问报告.md

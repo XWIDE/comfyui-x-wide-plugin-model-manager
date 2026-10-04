@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+*.log
+# 本插件运行期自己生成的东西：只对本机有意义，不要提交
+actions.log
+*.jsonl
+_*.json
+autopilot.json
+# 本机分析 / 顾问报告的导出结果（含本机路径），也不要提交
+CustomNode插件顾问报告.md
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,52 @@
+X-WIDE Plugin & Model Manager — 版权与来源说明
+======================================================
+
+本插件为原创项目，不是任何其它插件的修改版本，也不包含任何第三方项目
+的源代码副本。
+
+    名称：X-WIDE Plugin & Model Manager
+    包名：x-wide-plugin-model-manager
+    作者：X-WIDE
+    仓库：https://github.com/XWIDE/comfyui-x-wide-plugin-model-manager
+    许可：GPL-3.0
+
+第三方依赖声明
+--------------
+
+本插件不打包、不内嵌、不附带任何第三方库，也不要求额外安装任何依赖。
+
+运行期只用：
+
+  1. ComfyUI 自带的 `aiohttp`
+     —— 仅用于注册本插件自己的本地 HTTP 路由（ComfyUI 启动时必然已经装好）。
+     版权归 aiohttp 项目及其作者所有，遵循 Apache License 2.0。
+  2. Python 标准库（`os` / `json` / `re` / `time` / `logging` / `asyncio` 等）。
+  3. ComfyUI 自身提供的 `folder_paths` / `comfy.storage` 等运行时接口
+     —— 只调用，不修改、不复制其源码。
+     ComfyUI 由 Comfy Org 开发，遵循 GPL-3.0。
+
+除此之外，本插件没有引入任何第三方代码、图片或数据文件（`web/logo_xwide.png` 与
+`web/logo_xwide_icon.png` 都是作者 X-WIDE 自己的品牌图，前者的品牌字样为 `X-WIDE / I BELIEVE`）。
+
+设计上参照的约定
+----------------
+
+  1. `.disabled` 目录后缀是 ComfyUI 自身的约定（`nodes.py` / `folder_paths` 会跳过
+     `.disabled` 结尾的目录）。本插件沿用这一约定，以便「禁用」之后还能原样「恢复」；
+     这属于使用 ComfyUI 的公开行为，而非复制其代码。
+  2. 画布 / 侧边栏的界面扩展方式沿用 ComfyUI 前端公开的插件接口
+     （`registerSidebarTab` 等），未修改、未重新分发 ComfyUI 前端代码。
+
+本插件涉及的写操作（供使用者知情）
+----------------------------------
+
+  1. 「禁用 / 恢复」= 把 `custom_nodes/<包名>` 目录改名成 `<包名>.disabled`（或改回），
+     不删除任何文件；
+  2. 在本插件自己的目录下写入缓存与日志（`_*.json`、`_model_loads.jsonl`、`actions.log`）。
+
+除上述两项外，本插件不写盘、不联网、不动 pip 包、不改 ComfyUI 自身的任何文件。
+
+版权
+----
+
+本插件版权归 X-WIDE 所有，以 GPL-3.0 授权发布，完整许可文本见同目录 LICENSE 文件。
